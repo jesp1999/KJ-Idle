@@ -1,18 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { Outlet, Link } from "react-router-dom";
 
 function App() {
-  var MongoClient = require('mongodb').MongoClient;
-  var url = 'mongodb://localhost/UserDB';
-
-  MongoClient.connect(url, function(err, db) {
-    var cursor = db.collection("User").find();
-
-    cursor.each(function(err, doc) {
-      console.log(doc);
-    });
-  });
   return (
     <div className="App">
       <header className="App-header">
